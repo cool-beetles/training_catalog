@@ -740,3 +740,99 @@ Processing by TrainingsController#index as HTML
 Completed 200 OK in 43ms (Views: 38.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-10-26 14:38:54 +0200
+Processing by TrainingsController#index as HTML
+  Rendering trainings/index.html.haml within layouts/application
+  Rendered trainings/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 67ms (Views: 42.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-26 14:41:22 +0200
+Processing by TrainingsController#index as HTML
+  Rendering trainings/index.html.haml within layouts/application
+  [1m[36mTraining Load (0.2ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  Rendered trainings/index.html.haml within layouts/application (254.2ms)
+Completed 500 Internal Server Error in 267ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_training_path' for #<#<Class:0x007fdcf4250c00>:0x007fdcf26bdcb8>):
+     9:         = link_to('Rent to someone', new_training_rental_path(t), class: "btn btn-default")
+    10: %div.btn-toolbar
+    11:   %div.btn-group-horizontal
+    12:     %p= link_to('Add new training', new_training_path, class: "btn btn-success")
+    13:     %p= link_to('Trashed trainings', trainings_trash_path, class: "btn btn-success")
+    14:     %p= link_to('All available types', types_path, class: "btn btn-success")
+  
+app/views/trainings/index.html.haml:12:in `_app_views_trainings_index_html_haml__1782573448697091051_70293468345240'
+Started GET "/" for 127.0.0.1 at 2018-10-26 14:42:45 +0200
+Processing by TrainingsController#index as HTML
+  Rendering trainings/index.html.haml within layouts/application
+  [1m[36mTraining Load (0.3ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  Rendered trainings/index.html.haml within layouts/application (311.2ms)
+Completed 500 Internal Server Error in 324ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_training_path' for #<#<Class:0x007fdcf4250c00>:0x007fdcf2072bb0>):
+     8:         = link_to t.title, t
+     9: %div.btn-toolbar
+    10:   %div.btn-group-horizontal
+    11:     %p= link_to('Add new training', new_training_path, class: "btn btn-success")
+  
+app/views/trainings/index.html.haml:11:in `_app_views_trainings_index_html_haml__1782573448697091051_70293465071880'
+Started GET "/" for 127.0.0.1 at 2018-10-26 14:43:31 +0200
+Processing by TrainingsController#index as HTML
+  Rendering trainings/index.html.haml within layouts/application
+  [1m[36mTraining Load (0.2ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  Rendered trainings/index.html.haml within layouts/application (220.1ms)
+Completed 500 Internal Server Error in 237ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_training_path' for #<#<Class:0x007fdcefeaaaf0>:0x007fdcefea2f80>):
+     8:         = link_to t.title, t
+     9: %div.btn-toolbar
+    10:   %div.btn-group-horizontal
+    11:     %p= link_to('Add new training', new_training_path, class: "btn btn-success")
+  
+app/views/trainings/index.html.haml:11:in `_app_views_trainings_index_html_haml__1782573448697091051_70293447344220'
+Started GET "/" for 127.0.0.1 at 2018-10-26 14:44:30 +0200
+Processing by TrainingsController#index as HTML
+  Rendering trainings/index.html.haml within layouts/application
+  [1m[36mTraining Load (0.2ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  Rendered trainings/index.html.haml within layouts/application (13.0ms)
+Completed 200 OK in 83ms (Views: 74.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 14:44:33 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/new.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 68ms (Views: 48.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-26 14:45:27 +0200
+Processing by TrainingsController#index as HTML
+  Rendering trainings/index.html.haml within layouts/application
+  [1m[36mTraining Load (0.3ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  Rendered trainings/index.html.haml within layouts/application (18.3ms)
+Completed 200 OK in 54ms (Views: 49.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-26 14:46:04 +0200
+Processing by TrainingsController#index as HTML
+  Rendering trainings/index.html.haml within layouts/application
+  [1m[36mTraining Load (0.3ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  Rendered trainings/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 50ms (Views: 45.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-26 15:00:40 +0200
+Processing by TrainingsController#index as HTML
+  Rendering trainings/index.html.haml within layouts/application
+  [1m[36mTraining Load (0.2ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  Rendered trainings/index.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 86ms (Views: 44.7ms | ActiveRecord: 1.2ms)
+
+
