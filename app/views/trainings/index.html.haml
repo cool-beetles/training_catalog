@@ -1,2 +1,11 @@
-%h1 Trainings#index
-%p Find me in app/views/trainings/index.html.haml
+%h1 List of trainings:
+- if @trainings == nil
+  %p There are not any trainings currently in the system.
+- else
+  %ul
+    - @trainings.each do |t|
+      %li
+        = link_to t.title, t
+%div.btn-toolbar
+  %div.btn-group-horizontal
+    %p= link_to('Add new training', new_training_path, class: "btn btn-success")
