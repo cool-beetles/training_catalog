@@ -1,5 +1,3 @@
 %h1 Add new training
 = form_for @training do |f|
   = render partial: 'form', locals: { f: f }
-  = f.submit "Create"
-= link_to 'Back', { action: 'index' }

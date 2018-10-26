@@ -38,6 +38,6 @@ class TrainingsController < ApplicationController
   private
   
   def params_training
-    params.require(:training).permit(:title, :set, :repetition, exercise_attributes: [:id, :title])
+    params.require(:training).permit(:title, :set, :repetition, exercise_attributes: [:id, :title, :_destroy])
   end
 end

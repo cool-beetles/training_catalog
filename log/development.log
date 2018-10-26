@@ -1178,3 +1178,1054 @@ Migrating to AddColumnInTrainigns (20181026143423)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/trainings" for 127.0.0.1 at 2018-10-26 22:10:55 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TrainingsController#index as HTML
+  Rendering trainings/index.html.haml within layouts/application
+  [1m[36mTraining Load (0.3ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  Rendered trainings/index.html.haml within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'cocoon' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ada/learning/apps/training_catalog/app/assets/config
+  /Users/ada/learning/apps/training_catalog/app/assets/images
+  /Users/ada/learning/apps/training_catalog/app/assets/javascripts
+  /Users/ada/learning/apps/training_catalog/app/assets/stylesheets
+  /Users/ada/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ada/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actioncable-5.1.6/lib/assets/compiled
+  /Users/ada/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionview-5.1.6/lib/assets/compiled
+  /Users/ada/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/ada/learning/apps/training_catalog/node_modules
+  /Users/ada/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /Users/ada/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /Users/ada/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /Users/ada/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.7/assets/images):
+    4:     %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}/
+    5:     %title TrainingCatalog
+    6:     = csrf_meta_tags
+    7:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    8:     %link{href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel: "stylesheet"}/
+    9:   %body
+   10:     %nav.navbar.navbar-inverse
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.haml:7:in `_app_views_layouts_application_html_haml___3091130854597647559_70293468177160'
+Started GET "/" for 127.0.0.1 at 2018-10-26 22:13:11 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TrainingsController#index as HTML
+  Rendering trainings/index.html.haml within layouts/application
+  [1m[36mTraining Load (0.3ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  Rendered trainings/index.html.haml within layouts/application (24.6ms)
+Completed 200 OK in 652ms (Views: 604.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:13:13 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (505.4ms)
+  Rendered trainings/new.html.haml within layouts/application (516.4ms)
+Completed 500 Internal Server Error in 570ms (ActiveRecord: 2.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `simple_form_for' for #<#<Class:0x007fe4ef47a640>:0x007fe4ecb6e710>):
+    1: %div
+    2:   = f.label :exercise
+    3:   = f.collection_select :exercise_id, Exercise.all, :id, :name
+    4: = simple_form_for @training do |f|
+    5:   = f.input :name
+    6:   = f.input :set
+    7:   = f.input :repetition
+  
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__1650156800297536732_70310593232000'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__989466032798120367_70310600401840'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__989466032798120367_70310600401840'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:17:19 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (270.7ms)
+  Rendered trainings/new.html.haml within layouts/application (278.3ms)
+Completed 500 Internal Server Error in 322ms (ActiveRecord: 3.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `simple_form_for' for #<#<Class:0x007fe4eefcf730>:0x007fe4eefdf3b0>):
+    1: %div
+    2:   = f.label :exercise
+    3:   = f.collection_select :exercise_id, Exercise.all, :id, :name
+    4: = simple_form_for @training do |f|
+    5:   = f.input :name
+    6:   = f.input :set
+    7:   = f.input :repetition
+  
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__1650156800297536732_70310619014440'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__989466032798120367_70310619396040'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__989466032798120367_70310619396040'
+Started GET "/trainings" for 127.0.0.1 at 2018-10-26 22:17:42 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TrainingsController#index as HTML
+  Rendering trainings/index.html.haml within layouts/application
+  [1m[36mTraining Load (0.3ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  Rendered trainings/index.html.haml within layouts/application (14.6ms)
+Completed 200 OK in 404ms (Views: 374.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:17:45 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (131.9ms)
+  Rendered trainings/new.html.haml within layouts/application (143.5ms)
+Completed 500 Internal Server Error in 184ms (ActiveRecord: 3.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Training:0x007faac029e1a0>):
+    2:   = f.label :exercise
+    3:   = f.collection_select :exercise_id, Exercise.all, :id, :name
+    4: = simple_form_for @training do |f|
+    5:   = f.input :name
+    6:   = f.input :set
+    7:   = f.input :repetition
+    8:   %h3 Exercises
+  
+app/views/trainings/_form.html.haml:5:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185671332980'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185671332980'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185667593260'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185667593260'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:18:15 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (40.7ms)
+  Rendered trainings/new.html.haml within layouts/application (51.1ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Missing partial trainings/_exercise_fields, application/_exercise_fields with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
+  * "/Users/ada/learning/apps/training_catalog/app/views"
+):
+     8:   %h3 Exercises
+     9:   #exercises
+    10:     = f.simple_fields_for :exercises do |exercise|
+    11:       = render 'exercise_fields', f: exercise
+    12:     .links
+    13:       = link_to_add_association 'add exercise', f, :exercises
+    14:   = f.submit
+  
+app/views/trainings/_form.html.haml:11:in `block (2 levels) in _app_views_trainings__form_html_haml__4324174002969841665_70185697672040'
+app/views/trainings/_form.html.haml:10:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185697672040'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185697672040'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185696588180'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185696588180'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:19:30 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_exercise_fields.html.haml (38.6ms)
+  Rendered trainings/_form.html.haml (62.1ms)
+  Rendered trainings/new.html.haml within layouts/application (69.0ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `new_record?' for nil:NilClass):
+    1: .nested-fields
+    2:   = f.input :description
+    3:   = f.input :done, as: :boolean
+    4:   = link_to_remove_association "remove exercise", f
+  
+app/views/trainings/_exercise_fields.html.haml:4:in `_app_views_trainings__exercise_fields_html_haml__731162678502691016_70185674516480'
+app/views/trainings/_form.html.haml:11:in `block (2 levels) in _app_views_trainings__form_html_haml__4324174002969841665_70185692023600'
+app/views/trainings/_form.html.haml:10:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185692023600'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185692023600'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185691958820'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185691958820'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:22:27 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_exercise_fields.html.haml (15.6ms)
+  Rendered trainings/_form.html.haml (37.0ms)
+  Rendered trainings/new.html.haml within layouts/application (43.8ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `new_record?' for nil:NilClass):
+    1: .nested-fields
+    2:   = f.input :description
+    3:   = f.input :done, as: :boolean
+    4:   = link_to_remove_association("remove exercise", f)
+  
+app/views/trainings/_exercise_fields.html.haml:4:in `_app_views_trainings__exercise_fields_html_haml__731162678502691016_70185721648580'
+app/views/trainings/_form.html.haml:11:in `block (2 levels) in _app_views_trainings__form_html_haml__4324174002969841665_70185721957480'
+app/views/trainings/_form.html.haml:10:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185721957480'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185721957480'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185722815200'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185722815200'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:23:34 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_exercise_fields.html.haml (22.1ms)
+  Rendered trainings/_form.html.haml (43.8ms)
+  Rendered trainings/new.html.haml within layouts/application (50.3ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `new_record?' for nil:NilClass):
+    1: .nested-fields
+    2:   = f.input :description
+    3:   = f.input :done, as: :boolean
+    4:   = link_to_remove_association 'remove exercise', f, :exercise
+  
+app/views/trainings/_exercise_fields.html.haml:4:in `_app_views_trainings__exercise_fields_html_haml__731162678502691016_70185674522380'
+app/views/trainings/_form.html.haml:11:in `block (2 levels) in _app_views_trainings__form_html_haml__4324174002969841665_70185670566100'
+app/views/trainings/_form.html.haml:10:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185670566100'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185670566100'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185675140640'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185675140640'
+Started GET "/trainings" for 127.0.0.1 at 2018-10-26 22:24:39 +0200
+Processing by TrainingsController#index as HTML
+  Rendering trainings/index.html.haml within layouts/application
+  [1m[36mTraining Load (0.2ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  Rendered trainings/index.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 72ms (Views: 57.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:24:40 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_exercise_fields.html.haml (19.3ms)
+  Rendered trainings/_form.html.haml (43.0ms)
+  Rendered trainings/new.html.haml within layouts/application (51.1ms)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `new_record?' for nil:NilClass):
+    1: .nested-fields
+    2:   = f.input :description
+    3:   = f.input :done, as: :boolean
+    4:   = link_to_remove_association 'remove exercise', f, :exercise
+  
+app/views/trainings/_exercise_fields.html.haml:4:in `_app_views_trainings__exercise_fields_html_haml__731162678502691016_70185689226520'
+app/views/trainings/_form.html.haml:11:in `block (2 levels) in _app_views_trainings__form_html_haml__4324174002969841665_70185697759180'
+app/views/trainings/_form.html.haml:10:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185697759180'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185697759180'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185697852080'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185697852080'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:28:26 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (80.7ms)
+  Rendered trainings/new.html.haml within layouts/application (87.5ms)
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'training_id' for Exercise.):
+    10:     = f.simple_fields_for :exercises do |exercise|
+    11:       = render 'exercise_fields', f: exercise
+    12:     .links
+    13:       = link_to_add_association 'add exercise', f, :exercises
+    14:   = f.submit
+  
+app/views/trainings/_form.html.haml:13:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185690374260'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185690374260'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185697709140'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185697709140'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:28:58 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (22.3ms)
+  Rendered trainings/new.html.haml within layouts/application (29.2ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'training_id' for Exercise.):
+    10:     = f.simple_fields_for :exercises do |exercise|
+    11:       = render 'exercise_fields', f: exercise
+    12:     .links
+    13:       = link_to_add_association 'add exercise', f, :exercises
+    14:   = f.submit
+  
+app/views/trainings/_form.html.haml:13:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185670913120'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185670913120'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185671090180'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185671090180'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:29:56 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (19.0ms)
+  Rendered trainings/new.html.haml within layouts/application (26.2ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'training_id' for Exercise.):
+    10:     = f.simple_fields_for :exercises do |exercise|
+    11:       = render 'exercise_fields', f: exercise
+    12:     .links
+    13:       = link_to_add_association 'add exercise', f, :exercises
+    14:   = f.submit
+  
+app/views/trainings/_form.html.haml:13:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185714713720'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185714713720'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185714489920'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185714489920'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:33:00 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (36.8ms)
+  Rendered trainings/new.html.haml within layouts/application (51.5ms)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'training_id' for Exercise.):
+    10:     = f.simple_fields_for :exercises do |exercise|
+    11:       = render 'exercise_fields', f: exercise
+    12:     .links
+    13:       = link_to_add_association 'add exercise', f, :exercises, partial: 'exercise_fields'
+    14:   = f.submit
+  
+app/views/trainings/_form.html.haml:13:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185697919600'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185697919600'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185699248240'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185699248240'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:34:00 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (21.3ms)
+  Rendered trainings/new.html.haml within layouts/application (29.4ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'training_id' for Exercise.):
+    10:     = f.simple_fields_for :exercises do |exercise|
+    11:       = render 'exercise_fields', f: exercise
+    12:     .links
+    13:       = link_to_add_association 'add exercise', f, :exercises, partial: 'exercise_fields'
+    14:   = f.submit
+  
+app/views/trainings/_form.html.haml:13:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185700531960'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185700531960'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185700250860'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185700250860'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:42:59 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (21.7ms)
+  Rendered trainings/new.html.haml within layouts/application (28.4ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'training_id' for Exercise.):
+    10:     = f.simple_fields_for :exercises do |exercise|
+    11:       = render 'exercise_fields', f: exercise
+    12:     .links
+    13:       = link_to_add_association 'add exercise', f, :exercises, partial: 'exercise_fields'
+    14:   = f.submit
+  
+app/views/trainings/_form.html.haml:13:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185712343140'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185712343140'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185714292080'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185714292080'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:45:02 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (29.6ms)
+  Rendered trainings/new.html.haml within layouts/application (36.6ms)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'training_id' for Exercise.):
+    10:     = f.simple_fields_for :exercises do |exercise|
+    11:       = render partial: 'exercise_fields', locals: { f: f }
+    12:     .links
+    13:       = link_to_add_association 'add exercise', f, :exercises, partial: 'exercise_fields'
+    14:   = f.submit
+  
+app/views/trainings/_form.html.haml:13:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185721677320'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185721677320'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185714569760'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185714569760'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:45:33 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/_form.html.haml (5.1ms)
+  Rendered trainings/new.html.haml within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ada/learning/apps/training_catalog/app/views/trainings/_form.html.haml:13: syntax error, unexpected ',', expecting =>
+..., locals: { f: f }, :exercises, partial: 'exercise_fields'
+...                               ^):
+  
+app/views/trainings/_form.html.haml:13: syntax error, unexpected ',', expecting =>
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185714729140'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185714729140'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:45:57 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (292.0ms)
+  Rendered trainings/new.html.haml within layouts/application (299.0ms)
+Completed 500 Internal Server Error in 312ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `object' for #<Hash:0x007faabbc9ff28>):
+    10:     = f.simple_fields_for :exercises do |exercise|
+    11:       = render partial: 'exercise_fields', locals: { f: f }
+    12:     .links
+    13:       = link_to_add_association 'add exercise', locals: { f: f }, partial: 'exercise_fields'
+    14:   = f.submit
+  
+app/views/trainings/_form.html.haml:13:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185655093920'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185655093920'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185655599780'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185655599780'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:46:20 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (24.0ms)
+  Rendered trainings/new.html.haml within layouts/application (31.7ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'training_id' for Exercise.):
+    10:     = f.simple_fields_for :exercises do |exercise|
+    11:       = render partial: 'exercise_fields', locals: { f: f }
+    12:     .links
+    13:       = link_to_add_association 'add exercise', f, :exercises, partial: 'exercise_fields'
+    14:   = f.submit
+  
+app/views/trainings/_form.html.haml:13:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185672799720'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185672799720'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185668505120'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185668505120'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:47:56 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (21.1ms)
+  Rendered trainings/new.html.haml within layouts/application (27.5ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'training_id' for Exercise.):
+    10:     = f.simple_fields_for :exercises do |exercise|
+    11:       = render partial: 'exercise_fields', locals: { f: f }
+    12:     .links
+    13:       = link_to_add_association 'add exercise', f, :exercises
+    14:   = f.submit
+  
+app/views/trainings/_form.html.haml:13:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185722933980'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185722933980'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185712126860'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185712126860'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:48:22 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (19.7ms)
+  Rendered trainings/new.html.haml within layouts/application (26.2ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'training_id' for Exercise.):
+    10:     = f.simple_fields_for :exercises do |exercise|
+    11:       = render 'exercise_fields', f: exercise
+    12:     .links
+    13:       = link_to_add_association 'add exercise', f, :exercises
+    14:   = f.submit
+  
+app/views/trainings/_form.html.haml:13:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185692037900'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185692037900'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185711263660'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185711263660'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:49:15 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (55.7ms)
+  Rendered trainings/new.html.haml within layouts/application (63.0ms)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 3.2ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'training_id' for Exercise.):
+    10:     = f.simple_fields_for :exercises do |exercise|
+    11:       = render 'exercise_fields', f: exercise
+    12:     .links
+    13:       = link_to_add_association 'add exercise', f, :exercises
+    14:   = f.submit
+  
+app/views/trainings/_form.html.haml:13:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185714812900'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185714812900'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185713211840'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185713211840'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:49:45 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (32.8ms)
+  Rendered trainings/new.html.haml within layouts/application (40.2ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'training_id' for Exercise.):
+    10:     = f.simple_fields_for :exercises do |exercise|
+    11:       = render 'exercise_fields', f: exercise
+    12:     .links
+    13:       = link_to_add_association 'add exercise', f, :exercises
+    14:   = f.submit
+  
+app/views/trainings/_form.html.haml:13:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185673648060'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185673648060'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185667486640'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185667486640'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:50:50 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (34.4ms)
+  Rendered trainings/new.html.haml within layouts/application (41.9ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 4.3ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'training_id' for Exercise.):
+    10:     = f.simple_fields_for :exercises do |exercise|
+    11:       = render 'exercise_fields', f: exercise
+    12:     .links
+    13:       = link_to_add_association 'add exercise', f, :exercises
+    14:   = f.submit
+  
+app/views/trainings/_form.html.haml:13:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185700184780'
+app/views/trainings/_form.html.haml:4:in `_app_views_trainings__form_html_haml__4324174002969841665_70185700184780'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185698689660'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185698689660'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:57:06 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/_form.html.haml (7.9ms)
+  Rendered trainings/new.html.haml within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ada/learning/apps/training_catalog/app/views/trainings/_form.html.haml:3: syntax error, unexpected ')'
+)).to_s);).to_s);; _hamlout.bu...
+ ^
+/Users/ada/learning/apps/training_catalog/app/views/trainings/_form.html.haml:22: syntax error, unexpected keyword_ensure, expecting keyword_end
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/Users/ada/learning/apps/training_catalog/app/views/trainings/_form.html.haml:23: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/ada/learning/apps/training_catalog/app/views/trainings/_form.html.haml:25: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/trainings/_form.html.haml:3: syntax error, unexpected ')'
+app/views/trainings/_form.html.haml:22: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/trainings/_form.html.haml:23: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/trainings/_form.html.haml:25: syntax error, unexpected keyword_end, expecting ')'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185673286160'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185673286160'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:57:46 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/_form.html.haml (35.2ms)
+  Rendered trainings/new.html.haml within layouts/application (42.0ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'training_id' for Exercise.):
+    14:     = f.fields_for :exercises do |exercise|
+    15:       = render 'exercise_fields', f: exercise
+    16:     .links
+    17:       = link_to_add_association 'add exercise', f, :exercises
+    18:   = f.submit
+  
+app/views/trainings/_form.html.haml:17:in `_app_views_trainings__form_html_haml__4324174002969841665_70185713320060'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185715358560'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185715358560'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:58:20 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/_form.html.haml (8.8ms)
+  Rendered trainings/new.html.haml within layouts/application (16.6ms)
+Completed 200 OK in 60ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2018-10-26 22:58:26 +0200
+Processing by TrainingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/kxdYl3tlD5mgqBJZG3cW71KZfe4ZLiE2+0CUuRAu9SBqe0myExmLVwbu2NZMYUnbOdjadSE8MGDEaFACxGu5g==", "training"=>{"title"=>"", "set"=>"", "repetition"=>""}, "commit"=>"Create Training"}
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `trainings' for #<TrainingsController:0x007faabfd568a0>):
+  
+app/controllers/trainings_controller.rb:15:in `create'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 22:59:27 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/_form.html.haml (11.0ms)
+  Rendered trainings/new.html.haml within layouts/application (19.7ms)
+Completed 200 OK in 81ms (Views: 76.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2018-10-26 22:59:30 +0200
+Processing by TrainingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IVddA+p33dlHOK1EGcgnqzMHakIU5JG3UVN5WRC+kcBesu1Hf9Yvyn2htm4klH7X4qps3HgE2fIJr9pL/++E8g==", "training"=>{"title"=>"", "set"=>"", "repetition"=>""}, "commit"=>"Create Training"}
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `trainings' for #<TrainingsController:0x007faac025c908>):
+  
+app/controllers/trainings_controller.rb:15:in `create'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:02:29 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/_form.html.haml (10.4ms)
+  Rendered trainings/new.html.haml within layouts/application (17.3ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `exercises_id' for #<Training:0x007faac4878568>):
+    11:     = f.number_field :repetition
+    12:   %h3 Exercises
+    13:   #exercises
+    14:     = f.collection_select :exercises_id, Exercise.all, :id, :title do |exercise|
+    15:       = render 'exercise_fields', f: exercise
+    16:       = link_to_add_association 'add exercise', f, :exercises
+    17:   = f.submit
+  
+app/views/trainings/_form.html.haml:14:in `_app_views_trainings__form_html_haml__4324174002969841665_70185697742200'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185711998860'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185711998860'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:02:48 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (10.0ms)
+  Rendered trainings/new.html.haml within layouts/application (17.1ms)
+Completed 200 OK in 79ms (Views: 74.8ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:08:46 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (19.4ms)
+  Rendered trainings/new.html.haml within layouts/application (30.9ms)
+Completed 200 OK in 81ms (Views: 75.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2018-10-26 23:08:51 +0200
+Processing by TrainingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nmfZEqeiN2FkFaGrSnGvnKZoD+lZzLUPt12b55cuGYvhgmlWMgPFcl6MuoF3Lfbgd8UJdzUs/UrvoTj1eH8MuQ==", "training"=>{"title"=>"", "set"=>"", "repetition"=>""}, "commit"=>"Create Training"}
+Completed 500 Internal Server Error in 160ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `trainings' for #<TrainingsController:0x007faac6080980>):
+  
+app/controllers/trainings_controller.rb:15:in `create'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:10:41 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/_form.html.haml (16.7ms)
+  Rendered trainings/new.html.haml within layouts/application (32.7ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (4 for 1..3)):
+    11:     = f.number_field :repetition
+    12:   %h3 Exercises
+    13:   #exercises
+    14:     = f.fields_for :exercise_id, Exercise.all, :id, :title do |exercise|
+    15:       = render 'exercise_fields', f: exercise
+    16:       = link_to_add_association 'add exercise', f, :exercises
+    17:   = f.submit
+  
+app/views/trainings/_form.html.haml:14:in `_app_views_trainings__form_html_haml__4324174002969841665_70185714970100'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185698138160'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185698138160'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:11:19 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/_form.html.haml (4.3ms)
+  Rendered trainings/new.html.haml within layouts/application (13.2ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %h3 and nested within it.):
+    10:     %br
+    11:     = f.number_field :repetition
+    12:   %h3 Exercises
+    13:     = f.fields_for :exercise_id, Exercise.all, :id, :title do |exercise|
+    14:       = render 'exercise_fields', f: exercise
+    15:       = link_to_add_association 'add exercise', f, :exercises
+    16:   = f.submit
+  
+app/views/trainings/_form.html.haml:13
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185669008880'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185669008880'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:12:12 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/_form.html.haml (25.5ms)
+  Rendered trainings/new.html.haml within layouts/application (33.6ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %h3 and nested within it.):
+    10:     %br
+    11:     = f.number_field :repetition
+    12:   %h3 Exercises
+    13:     = f.fields_for :exercise_id, Exercise.all, :id, :title do |exercise|
+    14:       = render 'exercise_fields', f: exercise
+    15:       = link_to_add_association 'add exercise', f, :exercises
+    16:   = f.submit
+  
+app/views/trainings/_form.html.haml:13
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185709257400'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185709257400'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:12:16 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/_form.html.haml (3.6ms)
+  Rendered trainings/new.html.haml within layouts/application (11.9ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %h3 and nested within it.):
+    10:     %br
+    11:     = f.number_field :repetition
+    12:   %h3 Exercises
+    13:     = f.fields_for :exercise_id, Exercise.all, :id, :title do |exercise|
+    14:       = render 'exercise_fields', f: exercise
+    15:       = link_to_add_association 'add exercise', f, :exercises
+    16:   = f.submit
+  
+app/views/trainings/_form.html.haml:13
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185690769680'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185690769680'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:12:24 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/_form.html.haml (13.0ms)
+  Rendered trainings/new.html.haml within layouts/application (22.4ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `exercises_id' for #<Training:0x007faabc723940>):
+    11:     = f.number_field :repetition
+    12:   %h3 Exercises
+    13:   #exercises
+    14:     = f.collection_select :exercises_id, Exercise.all, :id, :title do |exercise|
+    15:       = render 'exercise_fields', f: exercise
+    16:       = link_to_add_association 'add exercise', f, :exercises
+    17:   = f.submit
+  
+app/views/trainings/_form.html.haml:14:in `_app_views_trainings__form_html_haml__4324174002969841665_70185657811120'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185641348740'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185641348740'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:13:50 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/_form.html.haml (11.7ms)
+  Rendered trainings/new.html.haml within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `exercises_id' for #<Training:0x007faac4f9bdb8>):
+    10:     = f.number_field :repetition
+    11:   %h3 Exercises
+    12:   #exercises
+    13:     = f.collection_select :exercises_id, Exercise.all, :id, :title do |exercise|
+    14:       = render 'exercise_fields', f: exercise
+    15:       = link_to_add_association 'add exercise', f, :exercises
+    16:   = f.submit
+  
+app/views/trainings/_form.html.haml:13:in `_app_views_trainings__form_html_haml__4324174002969841665_70185712652400'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185712931720'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185712931720'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:14:11 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (13.2ms)
+  Rendered trainings/new.html.haml within layouts/application (28.4ms)
+Completed 200 OK in 75ms (Views: 70.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2018-10-26 23:14:21 +0200
+Processing by TrainingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s00FT4KiWyE8Rwx5eL6JNneISoHu0tjO9iujEFdOGfrMqLULFwOpMgbeF1NF4tBKpiVMH4IykIuu1wACuB8MyA==", "training"=>{"title"=>"", "set"=>"", "repetition"=>""}, "commit"=>"Create Training"}
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `trainings' for #<TrainingsController:0x007faabfa8fc20>):
+  
+app/controllers/trainings_controller.rb:15:in `create'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:15:51 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (13.8ms)
+  Rendered trainings/new.html.haml within layouts/application (22.2ms)
+Completed 200 OK in 88ms (Views: 61.5ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/trainings" for 127.0.0.1 at 2018-10-26 23:16:00 +0200
+Processing by TrainingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ukbz5kfW7O01w+T9A04b/XgWB2047hBAJ3YxdbHK43DFo0Oi0nce/g9a/9c+EkKBqbsB81QOWAV/ipJnXpv2Qg==", "training"=>{"title"=>"", "set"=>"", "repetition"=>"5"}, "commit"=>"Create Training"}
+Completed 500 Internal Server Error in 204ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `trainings' for #<TrainingsController:0x007faac3631c38>):
+  
+app/controllers/trainings_controller.rb:15:in `create'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:16:35 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (13.6ms)
+  Rendered trainings/new.html.haml within layouts/application (25.9ms)
+Completed 200 OK in 72ms (Views: 66.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:17:10 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (10.5ms)
+  Rendered trainings/new.html.haml within layouts/application (19.1ms)
+Completed 200 OK in 75ms (Views: 70.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:19:55 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/_form.html.haml (17.5ms)
+  Rendered trainings/new.html.haml within layouts/application (26.4ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (1 for 4..6)):
+    12:   = f.fields_for :exercise do |exercise_form|
+    13:     %div
+    14:       = exercise_form.label :title
+    15:       = exercise_form.collection_select :title do |exercise|
+    16:         = render 'exercise_fields', f
+    17:         = link_to_add_association 'add exercise', f
+    18:     = f.submit
+  
+app/views/trainings/_form.html.haml:15:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185655930700'
+app/views/trainings/_form.html.haml:12:in `_app_views_trainings__form_html_haml__4324174002969841665_70185655930700'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185657715940'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185657715940'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:21:28 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (11.3ms)
+  Rendered trainings/new.html.haml within layouts/application (21.2ms)
+Completed 200 OK in 81ms (Views: 76.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:22:00 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/_form.html.haml (30.3ms)
+  Rendered trainings/new.html.haml within layouts/application (43.7ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ada/learning/apps/training_catalog/app/views/trainings/_form.html.haml:20: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/trainings/_form.html.haml:20: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185714601420'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185714601420'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:22:13 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/_form.html.haml (7.1ms)
+  Rendered trainings/new.html.haml within layouts/application (15.8ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ada/learning/apps/training_catalog/app/views/trainings/_form.html.haml:20: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/trainings/_form.html.haml:20: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185690900220'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185690900220'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:22:26 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/_form.html.haml (5.5ms)
+  Rendered trainings/new.html.haml within layouts/application (12.5ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ada/learning/apps/training_catalog/app/views/trainings/_form.html.haml:20: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/trainings/_form.html.haml:20: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185669700540'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185669700540'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:22:38 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/_form.html.haml (5.7ms)
+  Rendered trainings/new.html.haml within layouts/application (13.5ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ada/learning/apps/training_catalog/app/views/trainings/_form.html.haml:20: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/trainings/_form.html.haml:20: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185709131580'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185709131580'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:22:50 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/_form.html.haml (6.7ms)
+  Rendered trainings/new.html.haml within layouts/application (13.8ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ada/learning/apps/training_catalog/app/views/trainings/_form.html.haml:19: syntax error, unexpected keyword_ensure, expecting end-of-input
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^):
+  
+app/views/trainings/_form.html.haml:19: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185700265500'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185700265500'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:22:59 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  Rendered trainings/_form.html.haml (5.7ms)
+  Rendered trainings/new.html.haml within layouts/application (37.1ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ada/learning/apps/training_catalog/app/views/trainings/_form.html.haml:20: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/trainings/_form.html.haml:20: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185709240940'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185709240940'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:23:19 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (294.4ms)
+  Rendered trainings/new.html.haml within layouts/application (305.4ms)
+Completed 500 Internal Server Error in 320ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `keys' for #<ActionView::Helpers::FormBuilder:0x007faac263eab0>):
+    13:     %div
+    14:       = exercise_form.label :title
+    15:       = exercise_form.collection_select :exercise_id, Exercise.all, :id, :title
+    16:       = render 'exercise_fields', f
+    17:       = link_to_add_association 'add exercise', f
+    18:       = f.submit
+  
+app/views/trainings/_form.html.haml:16:in `block in _app_views_trainings__form_html_haml__4324174002969841665_70185691242640'
+app/views/trainings/_form.html.haml:12:in `_app_views_trainings__form_html_haml__4324174002969841665_70185691242640'
+app/views/trainings/new.html.haml:3:in `block in _app_views_trainings_new_html_haml__3946542831954562019_70185699755160'
+app/views/trainings/new.html.haml:2:in `_app_views_trainings_new_html_haml__3946542831954562019_70185699755160'
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:24:31 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (13.1ms)
+  Rendered trainings/new.html.haml within layouts/application (22.2ms)
+Completed 200 OK in 69ms (Views: 65.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:25:18 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (13.3ms)
+  Rendered trainings/new.html.haml within layouts/application (24.7ms)
+Completed 200 OK in 72ms (Views: 66.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:25:28 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (11.8ms)
+  Rendered trainings/new.html.haml within layouts/application (22.2ms)
+Completed 200 OK in 70ms (Views: 65.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:26:00 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (11.3ms)
+  Rendered trainings/new.html.haml within layouts/application (20.2ms)
+Completed 200 OK in 69ms (Views: 63.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:28:51 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (12.9ms)
+  Rendered trainings/new.html.haml within layouts/application (21.0ms)
+Completed 200 OK in 72ms (Views: 66.8ms | ActiveRecord: 0.4ms)
+
+

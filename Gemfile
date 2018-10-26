@@ -36,6 +36,7 @@ gem 'html2haml'
 gem 'haml-rails'
 gem 'dotenv-rails'
 gem 'cocoon'
+gem 'simple_form'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

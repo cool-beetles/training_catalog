@@ -1,0 +1,19 @@
+%div
+  = form_for @training do |f|
+    = f.label :title
+    = f.text_field :title
+  %div
+    = f.label :set
+    = f.number_field :set
+  %div
+    = f.label :repetition
+    = f.number_field :repetition
+  %h3 Exercises
+  = f.fields_for :exercise do |exercise_form|
+    %div
+      = exercise_form.label :title
+      = exercise_form.collection_select(:exercise_id, Exercise.all, :id, :title) do |exercise|
+        = render 'exercise_fields', f, :exercises
+        = link_to_add_association 'add exercise', f
+      %br
+      = f.submit
