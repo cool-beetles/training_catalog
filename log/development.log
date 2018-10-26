@@ -1082,3 +1082,58 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `call'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/exercises" for 127.0.0.1 at 2018-10-26 15:22:59 +0200
+Processing by ExercisesController#index as HTML
+  Rendering exercises/index.html.haml within layouts/application
+  Rendered exercises/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 114ms (Views: 88.9ms)
+
+
+Started GET "/trainings" for 127.0.0.1 at 2018-10-26 15:36:28 +0200
+Processing by TrainingsController#index as HTML
+  Rendering trainings/index.html.haml within layouts/application
+  [1m[36mTraining Load (0.2ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  Rendered trainings/index.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 88ms (Views: 74.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/exercises" for 127.0.0.1 at 2018-10-26 16:06:40 +0200
+Processing by ExercisesController#index as HTML
+  Rendering exercises/index.html.haml within layouts/application
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered exercises/index.html.haml within layouts/application (216.9ms)
+Completed 500 Internal Server Error in 235ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_exercise_path' for #<#<Class:0x007fdcf270c2f0>:0x007fdcf26d6948>):
+     8:         = link_to t.title, t
+     9: %div.btn-toolbar
+    10:   %div.btn-group-horizontal
+    11:     %p= link_to('Add new exercise', new_exercise_path, class: "btn btn-success")
+  
+app/views/exercises/index.html.haml:11:in `_app_views_exercises_index_html_haml___1583165351444461638_70293468505580'
+Started GET "/trainings" for 127.0.0.1 at 2018-10-26 16:06:45 +0200
+Processing by TrainingsController#index as HTML
+  Rendering trainings/index.html.haml within layouts/application
+  [1m[36mTraining Load (0.3ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  Rendered trainings/index.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 70ms (Views: 57.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/trainings" for 127.0.0.1 at 2018-10-26 16:11:38 +0200
+Processing by TrainingsController#index as HTML
+  Rendering trainings/index.html.haml within layouts/application
+  [1m[36mTraining Load (0.2ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  Rendered trainings/index.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 74ms (Views: 58.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/trainings" for 127.0.0.1 at 2018-10-26 16:12:11 +0200
+Processing by TrainingsController#index as HTML
+  Rendering trainings/index.html.haml within layouts/application
+  [1m[36mTraining Load (0.3ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  Rendered trainings/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 73ms (Views: 68.2ms | ActiveRecord: 0.3ms)
+
+
