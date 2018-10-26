@@ -2229,3 +2229,38 @@ Processing by TrainingsController#new as HTML
 Completed 200 OK in 72ms (Views: 66.8ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:34:30 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (11.0ms)
+  Rendered trainings/new.html.haml within layouts/application (17.8ms)
+Completed 200 OK in 70ms (Views: 65.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-26 23:37:57 +0200
+Processing by TrainingsController#index as HTML
+  Rendering trainings/index.html.haml within layouts/application
+  [1m[36mTraining Load (0.3ms)[0m  [1m[34mSELECT "trainings".* FROM "trainings"[0m
+  Rendered trainings/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 43ms (Views: 39.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:37:59 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (8.2ms)
+  Rendered trainings/new.html.haml within layouts/application (14.8ms)
+Completed 200 OK in 64ms (Views: 56.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trainings/new" for 127.0.0.1 at 2018-10-26 23:38:12 +0200
+Processing by TrainingsController#new as HTML
+  Rendering trainings/new.html.haml within layouts/application
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises"[0m
+  Rendered trainings/_form.html.haml (9.5ms)
+  Rendered trainings/new.html.haml within layouts/application (17.2ms)
+Completed 200 OK in 64ms (Views: 58.7ms | ActiveRecord: 0.3ms)
+
+
